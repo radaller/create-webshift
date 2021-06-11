@@ -79,6 +79,10 @@ create({
             contents: fs.readFileSync(`${__dirname}/react-emotion/src/App.js`, "utf8"),
         },
         {
+            path: "src/theme.js",
+            contents: fs.readFileSync(`${__dirname}/react-emotion/src/theme.js`, "utf8"),
+        },
+        {
             path: "src/favicon.ico",
             contents: fs.readFileSync(`${__dirname}/react-emotion/src/favicon.ico`, "utf8"),
         },
