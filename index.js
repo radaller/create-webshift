@@ -92,7 +92,7 @@ create({
         },
         {
             path: ".gitignore",
-            contents: fs.readFileSync(`${__dirname}/react-emotion/gitignore`, "utf8")
+            contents: fs.readFileSync(`${__dirname}/react-emotion/.gitignore`, "utf8")
         },
         {
             path: "Dockerfile",
