@@ -92,19 +92,19 @@ create({
         },
         {
             path: ".gitignore",
-            contents: fs.readFileSync(`${__dirname}/react-emotion/.gitignore`, "utf8")
+            contents: fs.readFileSync(`${__dirname}/react-emotion/.gitignore`, "utf8"),
         },
         {
             path: "Dockerfile",
-            contents: fs.readFileSync(`${__dirname}/Dockerfile`, "utf8")
+            contents: fs.readFileSync(`${__dirname}/Dockerfile`, "utf8"),
         },
         {
             path: "Readme.md",
-            contents: fs.readFileSync(`${__dirname}/react-emotion/Readme.md`, "utf8")
+            contents: fs.readFileSync(`${__dirname}/react-emotion/Readme.md`, "utf8"),
         },
         {
             path: "webshift.config.js",
-            contents: fs.readFileSync(`${__dirname}/webshift.config.js`, "utf8")
+            contents: fs.readFileSync(`${__dirname}/webshift.config.js`, "utf8"),
         },
     ]
 }, {
