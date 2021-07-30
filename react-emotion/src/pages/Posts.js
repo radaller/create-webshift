@@ -1,15 +1,17 @@
 import { useServerSideEffect } from 'webshift';
 import axios from 'axios';
 
-export default () => {
+import logger from '@logger';
 
-    const [data] = useServerSideEffect('posts', () => {
+export default () => {
+    logger.verbose({message: "Render", meta: { component: 'Users'}});
+
+    const [data, error] = useServerSideEffect('posts', () => {
         return axios.get("https://jsonplaceholder.typicode.com/posts");
     }, []);
 
     return (
         <div>
-            { console.log("[Render]","<Posts />") }
             <h2>Posts</h2>
             <ul>
                 { data?.map(item => (

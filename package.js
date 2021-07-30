@@ -5,7 +5,7 @@ module.exports = {
     license: "",
     main: "",
     scripts: {
-        "start": "webshift dev",
+        "start": "LOG_LEVEL=verbose webshift dev",
         "build": "NODE_ENV=production webshift build",
         "build:start": "(cd build && node server.js)"
     },
