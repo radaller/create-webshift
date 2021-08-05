@@ -3,12 +3,11 @@ import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 import loadable from '@loadable/component';
 
-import WebpackLogo from './icon-webpack.svg';
-import ReactLogo from './icon-react.png';
-import EmotionLogo from './icon-emotion.png';
-import LoadableLogo from './icon-loadable.png';
-//import Favicon from "./favicon.ico";
-//import Logo192 from "./logo192.png";
+import WebpackLogo from './img/icon-webpack.svg';
+import ReactLogo from './img/icon-react.png';
+import EmotionLogo from './img/icon-emotion.png';
+import LoadableLogo from './img/icon-loadable.png';
+import Favicon from "./img/favicon.ico";
 import theme from './theme';
 
 import Bar from './components/Bar';
@@ -19,11 +18,10 @@ export const Headers = () => {
     return (
         <head>
             <meta charSet="utf-8" />
-            {/*<link rel="icon" href={ Favicon } />*/}
+            <link rel="icon" href={ Favicon } />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
             <meta name="description" content="Web site created using create-react-app" />
-            {/*<link rel="apple-touch-icon" href={ Logo192 } />*/}
             <title>title</title>
         </head>
     );
@@ -59,22 +57,22 @@ export default () => {
                 <Link to="/">
                     <Button>Home</Button>
                 </Link>
-                <Link to="/posts">
+                <Link to="/posts/">
                     <Button>Posts</Button>
                 </Link>
-                <Link to="/users">
+                <Link to="/users/">
                     <Button>Users</Button>
                 </Link>
-                <Link to="/about">
+                <Link to="/about/">
                     <Button>About Us</Button>
                 </Link>
                 <Button onClick={ handleClick }>Click Test</Button>
             </Bar>
             <Switch>
                 <Route path={ '/' } component={ Welcome } exact/>
-                <Route path={ '/posts' } component={ Posts } />
-                <Route path={ '/users' } component={ Users } />
-                <Route path={ '/about' } component={ Aboutus } />
+                <Route path={ '/posts/' } component={ Posts } />
+                <Route path={ '/users/' } component={ Users } />
+                <Route path={ '/about/' } component={ Aboutus } />
                 <Route component={ Error } />
             </Switch>
         </ThemeProvider>

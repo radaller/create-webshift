@@ -4,7 +4,7 @@ import axios from 'axios';
 import logger from '@logger';
 
 export default () => {
-    logger.verbose({message: "Render", meta: { component: 'Users'}});
+    logger.verbose({message: "[Render]", meta: { component: 'Users'}});
 
     const [data, error] = useServerSideEffect('posts', () => {
         return axios.get("https://jsonplaceholder.typicode.com/posts");

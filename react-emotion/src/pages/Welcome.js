@@ -1,13 +1,11 @@
-import { useServerSideEffect } from 'webshift';
-import axios from 'axios';
+import logger from '@logger';
 
 export default () => {
+    logger.verbose({message: "[Render]", meta: { component: 'Welcome'}});
 
     return (
         <div>
-            { console.log("<Welcome/>") }
             <h2>Welcome</h2>
-
         </div>
     );
 }

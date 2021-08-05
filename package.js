@@ -5,23 +5,15 @@ module.exports = {
     license: "",
     main: "",
     scripts: {
-        "start": "LOG_LEVEL=verbose webshift dev",
-        "build": "NODE_ENV=production webshift build",
+        "start": "webshift dev",
+        "build": "NODE_ENV=production webshift build && npm run build:copy:env",
+        "build:copy:env": "cp .env.template build/.env",
         "build:start": "(cd build && node server.js)"
     },
     eslintConfig: {
         "extends": [
             "react-app",
             "react-app/jest"
-        ]
-    },
-    babel: {
-        "presets": [
-            "@babel/preset-env",
-            "@babel/preset-react"
-        ],
-        "plugins": [
-            "@loadable/babel-plugin"
         ]
     },
     browserslist: {

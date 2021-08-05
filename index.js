@@ -21,6 +21,8 @@ const config = {
         getFilesConfig(`${__dirname}/`, ".gitignore"),
         getFilesConfig(`${__dirname}/`, "Dockerfile"),
         getFilesConfig(`${__dirname}/`, "webshift.config.js"),
+        getFilesConfig(`${__dirname}/`, ".env.template"),
+        getFilesConfig(`${__dirname}/`, "babel.config.json"),
     ],
     package: require('./package'),
     dependencies: [

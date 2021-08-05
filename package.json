@@ -7,6 +7,9 @@
     "create-webshift": "index.js"
   },
   "files": [
+    ".env.template",
+    ".gitignore",
+    "babel.config.json",
     "index.js",
     "package.js",
     "react-emotion/**/*",
