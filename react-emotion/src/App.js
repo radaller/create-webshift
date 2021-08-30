@@ -27,7 +27,7 @@ export const Headers = () => {
     );
 }
 
-export default () => {
+export default function App() {
 
     const Welcome = loadable(() => import('./pages/Welcome'));
     const Posts = loadable(() => import('./pages/Posts'));

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import logger from '@logger';
 
-export default () => {
+export default function Posts() {
     logger.verbose({message: "[Render]", meta: { component: 'Users'}});
 
     const [data, error] = useServerSideEffect('posts', () => {
