@@ -9,7 +9,7 @@
   "files": [
     ".env.template",
     ".gitignore",
-    "babel.config.json",
+    "babel.config.js",
     "index.js",
     "package.js",
     "react-emotion/**/*",
