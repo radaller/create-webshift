@@ -4,25 +4,25 @@ const create = require("base-create");
 const fs = require('fs');
 const glob = require('glob');
 
-const getFilesConfig = (cwd, filePath) => {
+const getFilesCopyConfig = (filePathOrigin, filePathDestination) => {
     return {
-        path: filePath,
-        contents: fs.readFileSync(`${cwd}${filePath}`, "utf8"),
+        path: filePathDestination,
+        contents: fs.readFileSync(filePathOrigin, "utf8"),
     };
 };
 
 const srcFiles = glob
     .sync('**/*.*', { cwd: `${__dirname}/react-emotion/` })
-    .map(f => getFilesConfig(`${__dirname}/react-emotion/`, f));
+    .map(f => getFilesCopyConfig(`${__dirname}/react-emotion/${f}`, f));
 
 const config = {
     files: [
         ...srcFiles,
-        getFilesConfig(`${__dirname}/.gitignore`, ".gitignore.template"),
-        getFilesConfig(`${__dirname}/`, "Dockerfile"),
-        getFilesConfig(`${__dirname}/`, "webshift.config.js"),
-        getFilesConfig(`${__dirname}/`, ".env.template"),
-        getFilesConfig(`${__dirname}/`, "babel.config.js"),
+        getFilesCopyConfig(`${__dirname}/.gitignore.template`, '.gitignore'),
+        getFilesCopyConfig(`${__dirname}/Dockerfile`, 'Dockerfile'),
+        getFilesCopyConfig(`${__dirname}/webshift.config.js`, 'webshift.config.js'),
+        getFilesCopyConfig(`${__dirname}/.env.template`, '.env.template'),
+        getFilesCopyConfig(`${__dirname}/babel.config.js`, 'babel.config.js'),
     ],
     package: require('./package'),
     dependencies: [

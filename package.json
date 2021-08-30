@@ -1,6 +1,6 @@
 {
   "name": "create-webshift",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "files": [
     ".env.template",
-    ".gitignore",
+    ".gitignore.template",
     "babel.config.js",
     "index.js",
     "package.js",
