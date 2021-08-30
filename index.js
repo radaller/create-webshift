@@ -22,6 +22,7 @@ const config = {
         getFilesCopyConfig(`${__dirname}/Dockerfile`, 'Dockerfile'),
         getFilesCopyConfig(`${__dirname}/webshift.config.js`, 'webshift.config.js'),
         getFilesCopyConfig(`${__dirname}/.env.template`, '.env.template'),
+        getFilesCopyConfig(`${__dirname}/.env.template`, '.env'),
         getFilesCopyConfig(`${__dirname}/babel.config.js`, 'babel.config.js'),
     ],
     package: require('./package'),
